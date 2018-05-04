@@ -1,0 +1,17 @@
+package org.skaggsm.kattis
+
+import scala.io.StdIn
+
+/**
+  * Created by Mitchell Skaggs on 4/22/2018.
+  */
+object hissingmicrophone {
+  def main(args: Array[String]): Unit = {
+    val line = StdIn.readLine()
+
+    if(line.contains("ss"))
+      println("hiss")
+    else
+      println("no hiss")
+  }
+}
