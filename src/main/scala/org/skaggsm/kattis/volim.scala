@@ -27,6 +27,7 @@ object volim {
 
     exploded match {
       case Some(GameState(_, numResponses)) => println(((initialPlayer + numResponses) % NUM_PLAYERS) + 1)
+      case _ => throw new MatchError(())
     }
   }
 

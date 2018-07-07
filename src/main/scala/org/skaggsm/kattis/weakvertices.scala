@@ -1,6 +1,7 @@
 package org.skaggsm.kattis
 
 import scala.io.StdIn
+import scala.language.postfixOps
 
 /**
   * Created by Mitchell Skaggs on 5/3/2018.
@@ -18,6 +19,7 @@ object weakvertices {
         StdIn.readLine.split(' ').map(_.toInt).zipWithIndex.flatMap {
           case (0, _) => None
           case (1, col) => Some(Set(row, col))
+          case _ => throw new MatchError(())
         }
       }).toSet
 

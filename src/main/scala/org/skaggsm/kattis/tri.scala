@@ -37,6 +37,7 @@ object tri {
         case Div => s"$x/$y=$z"
         case DivRight => s"$x=$y/$z"
       }
+      case _ => throw new MatchError(())
     })
   }
 
