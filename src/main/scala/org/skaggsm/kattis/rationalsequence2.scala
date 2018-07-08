@@ -20,16 +20,12 @@ object rationalsequence2 {
           .takeWhile(_.hasParent)
           .map(_.direction)
 
-        val binary = (directions :+ Right)
-          .reverse
-          .map {
-            case Left => '0';
-            case Right => '1'
-          }
-          .mkString
+        val binary = directions.map(_ == Right) :+ true
 
 
-        val location = Integer.parseInt(binary, 2)
+        val location = binary.foldRight(0L)((b, l) => {
+          (l << 1) + (if (b) 1 else 0)
+        })
 
         println(s"$num $location")
       })
@@ -51,13 +47,13 @@ object rationalsequence2 {
     }
 
     def parent: Node = {
-      if (hasParent)
-        direction match {
-          case Left => Node(p, q - p)
-          case Right => Node(p - q, q)
-        }
-      else
+      if (!hasParent)
         throw new UnsupportedOperationException(s"The node $this has no parent!")
+
+      direction match {
+        case Left => Node(p, q - p)
+        case Right => Node(p - q, q)
+      }
     }
 
     def rightChild: Node = {
