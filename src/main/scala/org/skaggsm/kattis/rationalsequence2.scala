@@ -37,13 +37,13 @@ object rationalsequence2 {
 
     val hasParent: Boolean = p != 1 || q != 1
 
-    val direction: NodeDirection = {
-      val hypotheticalParent = (p, q - p)
-
-      if (hypotheticalParent._1 > 0 && hypotheticalParent._2 > 0)
+    def direction: NodeDirection = {
+      if (p < q)
         Left
-      else
+      else if (p > q)
         Right
+      else
+        throw new UnsupportedOperationException(s"The node $this has no parent!")
     }
 
     def parent: Node = {
