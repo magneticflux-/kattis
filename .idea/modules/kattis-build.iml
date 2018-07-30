@@ -201,6 +201,7 @@
           <root url="jar://$USER_HOME$/.ivy2/cache/scala_2.12/sbt_1.0/com.timushev.sbt/sbt-updates/srcs/sbt-updates-0.3.4-sources.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/scala_2.12/sbt_1.0/org.jetbrains/sbt-structure-extractor/srcs/sbt-structure-extractor-2018.2-sources.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/scala_2.12/sbt_1.0/pl.project13.scala/sbt-jmh/srcs/sbt-jmh-0.3.4-sources.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/scala_2.12/sbt_1.0/org.jetbrains/sbt-idea-shell/srcs/sbt-idea-shell-2017.2-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
