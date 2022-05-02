@@ -11,7 +11,7 @@ object permutationdescent {
 
     val cases = StdIn.readInt()
 
-    Stream.fill(cases)(StdIn.readLine())
+    LazyList.fill(cases)(StdIn.readLine())
       .foreach(l => {
         val Array(index, n, k) = l.split(' ').map(_.toInt)
 
@@ -33,7 +33,7 @@ object permutationdescent {
     var inverseDenom = BigInt(1)
     var extraDenom = BigInt(1)
 
-    var reached17 = false
+    
 
     var numList = Seq[BigInt]()
     var denomList = Seq[BigInt]()

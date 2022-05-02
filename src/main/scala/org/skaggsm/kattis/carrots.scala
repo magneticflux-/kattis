@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object carrots {
   def main(args: Array[String]): Unit = {
-    val Array(_, solved) = StdIn.readLine.split(' ').map(_.toInt)
+    val Array(_, solved) = StdIn.readLine().split(' ').map(_.toInt)
 
     println(solved)
   }

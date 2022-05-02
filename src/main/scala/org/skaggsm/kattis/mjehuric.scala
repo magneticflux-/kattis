@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object mjehuric {
   def main(args: Array[String]): Unit = {
-    var list = StdIn.readLine.split(' ').map(_.toInt) match {
+    var list = StdIn.readLine().split(' ').map(_.toInt) match {
       case Array(a, b, c, d, e) => (a, b, c, d, e)
     }
 

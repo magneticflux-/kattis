@@ -12,7 +12,7 @@ object beavergnaw {
 
   def main(args: Array[String]): Unit = {
 
-    Iterator.continually(StdIn.readLine)
+    Iterator.continually(StdIn.readLine())
       .takeWhile(_ != "0 0")
       .foreach(line => {
         val Array(d, v) = line.split(' ').map(_.toDouble)

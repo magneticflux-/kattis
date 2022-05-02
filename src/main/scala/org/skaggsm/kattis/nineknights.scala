@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object nineknights {
   def main(args: Array[String]): Unit = {
-    val board: Seq[Seq[Boolean]] = Seq.fill(5)(StdIn.readLine).map(_.map {
+    val board: Seq[Seq[Boolean]] = Seq.fill(5)(StdIn.readLine()).map(_.map {
       case 'k' => true
       case '.' => false
     })

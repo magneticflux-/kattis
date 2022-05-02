@@ -7,9 +7,9 @@ import scala.io.StdIn
   */
 object prsteni {
   def main(args: Array[String]): Unit = {
-    StdIn.readInt
+    StdIn.readInt()
 
-    val gears = StdIn.readLine.split(' ').map(s => Fraction(s.toInt, 1)).toSeq
+    val gears = StdIn.readLine().split(' ').map(s => Fraction(s.toInt, 1)).toSeq
 
     gears.sliding(2).scanLeft(Fraction(1, 1))((speed, gears) => {
       val Seq(gear1, gear2) = gears
@@ -22,7 +22,7 @@ object prsteni {
   case class Fraction(num: Long, den: Long) {
     def -(other: Fraction): Fraction = (this + -other).reduce
 
-    def unary_- = Fraction(-num, den)
+    def unary_- : Fraction = Fraction(-num, den)
 
     def +(other: Fraction): Fraction = Fraction(num * other.den + other.num * den, den * other.den).reduce
 

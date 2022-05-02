@@ -7,9 +7,9 @@ import scala.io.StdIn
   */
 object tolower {
   def main(args: Array[String]): Unit = {
-    val Array(p, t) = StdIn.readLine.split(' ').map(_.toInt)
+    val Array(p, t) = StdIn.readLine().split(' ').map(_.toInt)
 
-    val correct = Stream.continually(StdIn.readLine)
+    val correct = LazyList.continually(StdIn.readLine())
       .take(p * t)
       .grouped(t)
       .count(_.forall(_.tail.forall(_.isLower)))

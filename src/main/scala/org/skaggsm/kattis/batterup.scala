@@ -7,9 +7,9 @@ import scala.io.StdIn
   */
 object batterup {
   def main(args: Array[String]): Unit = {
-    val count = StdIn.readInt
+    StdIn.readInt()
 
-    val countedBats = StdIn.readLine.split(' ').map(_.toInt).filter(_ >= 0)
+    val countedBats = StdIn.readLine().split(' ').map(_.toInt).filter(_ >= 0)
     println(countedBats.sum.toDouble / countedBats.length)
   }
 }

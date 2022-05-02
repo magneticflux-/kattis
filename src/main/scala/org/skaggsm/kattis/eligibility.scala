@@ -12,9 +12,9 @@ object eligibility {
   final val DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyy/MM/dd")
 
   def main(args: Array[String]): Unit = {
-    val numContestants = StdIn.readInt
+    val numContestants = StdIn.readInt()
 
-    Iterator.continually(StdIn.readLine)
+    Iterator.continually(StdIn.readLine())
       .take(numContestants)
       .map(line => {
         val Array(name, studyDateString, birthDateString, courseNumberString) = line.split(' ')

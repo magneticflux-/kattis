@@ -13,14 +13,14 @@ object calculator {
     val factory = new ScriptEngineManager
     val engine = factory.getEngineByName("JavaScript")
 
-    var line = StdIn.readLine
+    var line = StdIn.readLine()
     while (line != null && line != "") {
       line = line.replace("-", " -")
       val result = engine.eval(s"($line).toFixed(2)")
 
       println(result)
 
-      line = StdIn.readLine
+      line = StdIn.readLine()
     }
   }
 }

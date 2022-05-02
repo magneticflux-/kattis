@@ -7,11 +7,11 @@ import scala.io.StdIn
   */
 object cups {
   def main(args: Array[String]): Unit = {
-    val numCups = StdIn.readInt
+    val numCups = StdIn.readInt()
 
     (0 until numCups)
       .map(_ => {
-        val Array(first, second) = StdIn.readLine.split(' ')
+        val Array(first, second) = StdIn.readLine().split(' ')
         (first, second)
       })
       .map {

@@ -9,8 +9,8 @@ object abc {
   private final val defaultOrder = "ABC"
 
   def main(args: Array[String]): Unit = {
-    val numbers = StdIn.readLine.split(' ').map(_.toInt)
-    val ordering = StdIn.readLine
+    val numbers = StdIn.readLine().split(' ').map(_.toInt)
+    val ordering = StdIn.readLine()
 
     val mapping = defaultOrder.zip(numbers.sorted).toMap
 

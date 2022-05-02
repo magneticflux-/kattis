@@ -8,16 +8,16 @@ import scala.io.StdIn
   */
 object functionalfun {
   def main(args: Array[String]): Unit = {
-    var line = StdIn.readLine
+    var line = StdIn.readLine()
     while (line != null && line != "") {
 
-      val domain = line.split(' ').tail.toSet
-      val codomain = StdIn.readLine.split(' ').tail.toSet
+      line.split(' ').tail.toSet
+      val codomain = StdIn.readLine().split(' ').tail.toSet
 
-      val numRelations = StdIn.readInt
+      val numRelations = StdIn.readInt()
 
       val mappings = (0 until numRelations)
-        .map(_ => StdIn.readLine)
+        .map(_ => StdIn.readLine())
         .map(s => {
           val Array(from, to) = s.split(" -> ")
           from -> to
@@ -45,7 +45,7 @@ object functionalfun {
       else
         println("neither injective nor surjective")
 
-      line = StdIn.readLine
+      line = StdIn.readLine()
     }
   }
 }

@@ -1,15 +1,15 @@
 package org.skaggsm.kattis
 
 import scala.io.StdIn
-import scala.math._
+import scala.math.*
 
 /**
   * Created by Mitchell Skaggs on 7/29/2018.
   */
 object triangleornaments {
   def main(args: Array[String]): Unit = {
-    val numTriangles = StdIn.readInt
-    val totalSize = Stream.fill(numTriangles)(StdIn.readLine)
+    val numTriangles = StdIn.readInt()
+    val totalSize = LazyList.fill(numTriangles)(StdIn.readLine())
       .map(_.split(' ').map(_.toDouble))
       .map {
         case Array(a, b, c) =>

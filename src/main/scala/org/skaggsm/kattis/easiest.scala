@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object easiest {
   def main(args: Array[String]): Unit = {
-    var line = StdIn.readLine
+    var line = StdIn.readLine()
 
     while (line != null && line != "0") {
       val n = line.toInt
@@ -15,7 +15,7 @@ object easiest {
 
       (11 to 100).find(i => sum == sumDigits(i * n)) foreach println
 
-      line = StdIn.readLine
+      line = StdIn.readLine()
     }
   }
 

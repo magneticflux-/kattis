@@ -1,7 +1,7 @@
 package org.skaggsm.kattis
 
 import scala.io.StdIn
-import scala.math._
+import scala.math.*
 
 /**
   * Created by Mitchell Skaggs on 7/5/2018.
@@ -19,9 +19,9 @@ object racingalphabet {
 
 
   def main(args: Array[String]): Unit = {
-    val numAphorisms = StdIn.readInt
+    val numAphorisms = StdIn.readInt()
 
-    Iterator.continually(StdIn.readLine)
+    Iterator.continually(StdIn.readLine())
       .take(numAphorisms)
       .map(line => {
         val pickupTime = line.length * timePerPickup

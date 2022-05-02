@@ -7,9 +7,9 @@ import scala.io.StdIn
   */
 object cudoviste {
   def main(args: Array[String]): Unit = {
-    val Array(rows, cols) = StdIn.readLine.split(' ').map(_.toInt)
+    val Array(rows, cols) = StdIn.readLine().split(' ').map(_.toInt)
 
-    val grid = Iterator.continually(StdIn.readLine)
+    val grid = Iterator.continually(StdIn.readLine())
       .map(_.toArray)
       .take(rows)
       .toArray
@@ -27,7 +27,9 @@ object cudoviste {
           Some(crushed.count(_ == 'X'))
       })
       .groupBy(i => i)
+      .view
       .mapValues(_.size)
+      .toMap
       .withDefaultValue(0)
 
     (0 to 4)

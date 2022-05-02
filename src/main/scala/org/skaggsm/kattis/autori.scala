@@ -7,6 +7,6 @@ import scala.io.StdIn
   */
 object autori {
   def main(args: Array[String]): Unit = {
-    println(StdIn.readLine.split('-').map(_.head).mkString)
+    println(StdIn.readLine().split('-').map(_.head).mkString)
   }
 }

@@ -7,8 +7,8 @@ import scala.io.StdIn
   */
 object dicegame {
   def main(args: Array[String]): Unit = {
-    val gunnarScore = StdIn.readLine.split(' ').map(_.toInt).sum
-    val emmaScore = StdIn.readLine.split(' ').map(_.toInt).sum
+    val gunnarScore = StdIn.readLine().split(' ').map(_.toInt).sum
+    val emmaScore = StdIn.readLine().split(' ').map(_.toInt).sum
 
     if (gunnarScore > emmaScore)
       println("Gunnar")

@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object different {
   def main(args: Array[String]): Unit = {
-    Iterator.continually(StdIn.readLine).takeWhile(_ != null)
+    Iterator.continually(StdIn.readLine()).takeWhile(_ != null)
       .map(s => {
         val Array(x, y) = s.split(' ').map(_.toLong)
         (x - y).abs

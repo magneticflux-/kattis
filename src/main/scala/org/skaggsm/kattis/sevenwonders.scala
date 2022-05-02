@@ -8,7 +8,7 @@ import scala.io.StdIn
 object sevenwonders {
   def main(args: Array[String]): Unit = {
     val cardTypes = Set('T', 'C', 'G')
-    val cards = StdIn.readLine.groupBy(c => c).mapValues(_.length).withDefaultValue(0)
+    val cards = StdIn.readLine().groupBy(c => c).view.mapValues(_.length).toMap.withDefaultValue(0)
 
     println(cards.values.map(i => i * i).sum + cardTypes.map(cards(_)).min * 7)
   }

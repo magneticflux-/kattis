@@ -7,10 +7,10 @@ import scala.io.StdIn
   */
 object hangingout {
   def main(args: Array[String]): Unit = {
-    val Array(limit, numEvents) = StdIn.readLine.split(' ').map(_.toInt)
+    val Array(limit, numEvents) = StdIn.readLine().split(' ').map(_.toInt)
 
     val result = (0 until numEvents)
-      .map(_ => StdIn.readLine)
+      .map(_ => StdIn.readLine())
       .map(s => Event(
         (if (s.substring(0, 5) == "enter") 1 else -1)
           * s.substring(6).toInt))

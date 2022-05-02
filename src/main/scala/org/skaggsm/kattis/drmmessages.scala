@@ -14,7 +14,7 @@ object drmmessages {
   }
 
   def main(args: Array[String]): Unit = {
-    val line = StdIn.readLine
+    val line = StdIn.readLine()
 
     val (first, second) = line.splitAt(line.length / 2)
 

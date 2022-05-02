@@ -13,7 +13,7 @@ object conversationlog {
     val wordsUsed = mutable.Map[String, Int]().withDefaultValue(0)
     val wordsByUser = mutable.Map[String, mutable.Set[String]]()
 
-    Stream.fill(lines)(StdIn.readLine())
+    LazyList.fill(lines)(StdIn.readLine())
       .foreach(line => {
         val words = line.split(' ')
         val userSet = wordsByUser.getOrElseUpdate(words.head, mutable.Set[String]())
@@ -24,7 +24,7 @@ object conversationlog {
         }
       })
 
-    val wordsFromAllUsers = wordsByUser.values.toStream.reduce((i, j) => i & j)
+    val wordsFromAllUsers = wordsByUser.values.to(LazyList).reduce((i, j) => i & j)
 
     val sortedWords = wordsUsed.toSeq
       .filter(i => wordsFromAllUsers.contains(i._1))

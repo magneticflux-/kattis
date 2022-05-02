@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object ada {
   def main(args: Array[String]): Unit = {
-    val initialSequence = StdIn.readLine.split(' ').toSeq.map(_.toLong).drop(1)
+    val initialSequence = StdIn.readLine().split(' ').toSeq.map(_.toLong).drop(1)
 
     val derivatives = Iterator.iterate(initialSequence)(finiteDiff)
       .takeWhile(!_.forall(_ == 0))

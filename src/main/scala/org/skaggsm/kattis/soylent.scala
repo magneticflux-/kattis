@@ -7,9 +7,9 @@ import scala.io.StdIn
   */
 object soylent {
   def main(args: Array[String]): Unit = {
-    val cases = StdIn.readInt
+    val cases = StdIn.readInt()
 
-    Iterator.continually(StdIn.readInt).take(cases)
+    Iterator.continually(StdIn.readInt()).take(cases)
       .map(c => (c + 399) / 400)
       .foreach(println)
   }

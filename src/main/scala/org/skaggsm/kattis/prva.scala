@@ -7,9 +7,9 @@ import scala.io.StdIn
   */
 object prva {
   def main(args: Array[String]): Unit = {
-    val Array(r, _) = StdIn.readLine.split(' ').map(_.toInt)
+    val Array(r, _) = StdIn.readLine().split(' ').map(_.toInt)
 
-    val grid = Iterator.continually(StdIn.readLine).take(r).toSeq
+    val grid = Iterator.continually(StdIn.readLine()).take(r).toSeq
 
     val words = grid.flatMap(_.mkString.split('#')) ++ grid.transpose.flatMap(_.mkString.split('#')) filter (_.length > 1)
 

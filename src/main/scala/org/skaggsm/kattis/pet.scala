@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object pet {
   def main(args: Array[String]): Unit = {
-    val contestants = for (i <- 1 to 5) yield (i, StdIn.readLine.split(' ').map(_.toInt).sum)
+    val contestants = for (i <- 1 to 5) yield (i, StdIn.readLine().split(' ').map(_.toInt).sum)
 
     println(contestants.maxBy(_._2).productIterator.mkString(" "))
   }

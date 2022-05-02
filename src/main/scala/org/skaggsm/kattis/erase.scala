@@ -12,11 +12,11 @@ object erase {
   }
 
   def main(args: Array[String]): Unit = {
-    val writes = StdIn.readInt
+    val writes = StdIn.readInt()
     val writesIsOdd = writes % 2 == 1
 
-    val beforeFile = StdIn.readLine.map(toBits)
-    val afterFile = StdIn.readLine.map(toBits)
+    val beforeFile = StdIn.readLine().map(toBits)
+    val afterFile = StdIn.readLine().map(toBits)
 
     val expectedAfterFile = beforeFile.map(_ ^ writesIsOdd)
 

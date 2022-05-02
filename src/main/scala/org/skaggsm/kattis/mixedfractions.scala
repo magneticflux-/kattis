@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object mixedfractions {
   def main(args: Array[String]): Unit = {
-    Iterator.continually(StdIn.readLine)
+    Iterator.continually(StdIn.readLine())
       .takeWhile(_ != "0 0")
       .map(line => {
         val Array(n, d) = line.split(' ').map(_.toInt)

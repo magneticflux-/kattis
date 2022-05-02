@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object dicecup {
   def main(args: Array[String]): Unit = {
-    val Array(n, m) = StdIn.readLine.split(' ').map(_.toInt)
+    val Array(n, m) = StdIn.readLine().split(' ').map(_.toInt)
 
     val possibleRolls = for (i <- 1 to n; j <- 1 to m)
       yield (i, j)
@@ -15,7 +15,7 @@ object dicecup {
     val possibleResults = possibleRolls
       .map(p => p._1 + p._2)
       .groupBy(it => it)
-      .mapValues(_.size)
+      .view.mapValues(_.size).toMap
 
     val maxOccurrences = possibleResults.values.max
 

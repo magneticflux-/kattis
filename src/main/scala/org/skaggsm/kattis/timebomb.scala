@@ -20,7 +20,7 @@ object timebomb {
   )
 
   def main(args: Array[String]): Unit = {
-    val grid: Seq[Seq[Char]] = Seq.fill(5)(StdIn.readLine.seq :+ ' ').seq
+    val grid: Seq[Seq[Char]] = Seq.fill(5)(StdIn.readLine().to(Seq) :+ ' ')
 
     val letters = grid.transpose.grouped(4).toSeq.map {
       case Seq(x, y, z, _) => Seq(x, y, z).transpose.map(_.mkString).mkString("\n")

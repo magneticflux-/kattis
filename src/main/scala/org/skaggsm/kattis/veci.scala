@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object veci {
   def main(args: Array[String]): Unit = {
-    val x = StdIn.readInt
+    val x = StdIn.readInt()
 
     val possibilities = x.toString.permutations.toSeq.map(_.toInt).sorted
 

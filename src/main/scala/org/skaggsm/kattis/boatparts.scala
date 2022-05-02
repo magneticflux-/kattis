@@ -7,9 +7,9 @@ import scala.io.StdIn
   */
 object boatparts {
   def main(args: Array[String]): Unit = {
-    val Array(numParts, numDays) = StdIn.readLine.split(' ').map(_.toInt)
+    val Array(numParts, numDays) = StdIn.readLine().split(' ').map(_.toInt)
 
-    val replacements = Iterator.continually(StdIn.readLine).take(numDays).toSeq
+    val replacements = Iterator.continually(StdIn.readLine()).take(numDays).toSeq
 
     val days = replacements
       .view

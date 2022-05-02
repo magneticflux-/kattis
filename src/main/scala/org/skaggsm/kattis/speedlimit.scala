@@ -7,21 +7,24 @@ import scala.io.StdIn
   */
 object speedlimit {
   def main(args: Array[String]): Unit = {
-    var numEntries = StdIn.readInt
+    var numEntries = StdIn.readInt()
     while (numEntries != -1) {
       val entries = (0, 0) +: (0 until numEntries)
         .map(_ => {
-          val Array(speed, totalTime) = StdIn.readLine.split(' ').map(_.toInt)
+          val Array(speed, totalTime) = StdIn.readLine().split(' ').map(_.toInt)
           (speed, totalTime)
         })
 
-      println(entries.tail.zip(entries)
+      val miles = entries.tail
+        .zip(entries)
         .map(entryPair => {
           entryPair._1._1 * (entryPair._1._2 - entryPair._2._2)
         })
-        .sum + " miles")
+        .sum
 
-      numEntries = StdIn.readInt
+      println(s"$miles miles")
+
+      numEntries = StdIn.readInt()
     }
   }
 }

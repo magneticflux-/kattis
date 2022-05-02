@@ -7,10 +7,10 @@ import scala.io.StdIn
   */
 object parking {
   def main(args: Array[String]): Unit = {
-    val Array(a, b, c) = StdIn.readLine.split(' ').map(_.toInt)
-    val Array(x1, y1) = StdIn.readLine.split(' ').map(_.toInt)
-    val Array(x2, y2) = StdIn.readLine.split(' ').map(_.toInt)
-    val Array(x3, y3) = StdIn.readLine.split(' ').map(_.toInt)
+    val Array(a, b, c) = StdIn.readLine().split(' ').map(_.toInt)
+    val Array(x1, y1) = StdIn.readLine().split(' ').map(_.toInt)
+    val Array(x2, y2) = StdIn.readLine().split(' ').map(_.toInt)
+    val Array(x3, y3) = StdIn.readLine().split(' ').map(_.toInt)
 
     val ranges = Seq(x1 until y1, x2 until y2, x3 until y3)
 

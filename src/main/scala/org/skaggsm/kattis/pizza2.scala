@@ -8,7 +8,7 @@ import scala.math.{Pi, pow}
   */
 object pizza2 {
   def main(args: Array[String]): Unit = {
-    val Array(r, c) = StdIn.readLine.split(' ').map(_.toInt)
+    val Array(r, c) = StdIn.readLine().split(' ').map(_.toInt)
 
     val innerRadius = r - c
 

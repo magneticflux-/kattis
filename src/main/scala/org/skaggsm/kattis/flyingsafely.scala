@@ -7,14 +7,14 @@ import scala.io.StdIn
   */
 object flyingsafely {
   def main(args: Array[String]): Unit = {
-    val testCases = StdIn.readInt
+    val testCases = StdIn.readInt()
 
-    Stream.continually(StdIn.readLine)
+    LazyList.continually(StdIn.readLine())
       .take(testCases)
       .foreach(line => {
         val Array(n, m) = line.split(' ').map(_.toInt)
 
-        Stream.continually(StdIn.readLine)
+        LazyList.continually(StdIn.readLine())
           .take(m)
           .last
 

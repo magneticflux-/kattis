@@ -8,7 +8,7 @@ import scala.io.StdIn
 object tri {
 
   def main(args: Array[String]): Unit = {
-    val Array(a, b, c) = StdIn.readLine.split(' ').map(_.toInt)
+    val Array(a, b, c) = StdIn.readLine().split(' ').map(_.toInt)
 
     val equations = for (operations <- Seq(Add, AddRight, Sub, SubRight, Mul, MulRight, Div, DivRight)) yield ((a, b, c), operations)
 

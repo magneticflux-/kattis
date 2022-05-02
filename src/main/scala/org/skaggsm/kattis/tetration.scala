@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object tetration {
   def main(args: Array[String]): Unit = {
-    val n = StdIn.readDouble
+    val n = StdIn.readDouble()
 
     println(math.pow(n, 1 / n))
   }

@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object egypt {
   def main(args: Array[String]): Unit = {
-    Iterator.continually(StdIn.readLine)
+    Iterator.continually(StdIn.readLine())
       .takeWhile(_ != "0 0 0")
       .map(line => {
         val Array(a, b, c) = line.split(' ').map(_.toInt)

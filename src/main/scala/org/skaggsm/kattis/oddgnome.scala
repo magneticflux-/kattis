@@ -7,9 +7,9 @@ import scala.io.StdIn
   */
 object oddgnome {
   def main(args: Array[String]): Unit = {
-    val cases = StdIn.readInt
+    val cases = StdIn.readInt()
 
-    Iterator.continually(StdIn.readLine)
+    Iterator.continually(StdIn.readLine())
       .take(cases)
       .map(line => {
         line.split(' ')

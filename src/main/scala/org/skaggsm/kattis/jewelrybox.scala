@@ -7,9 +7,9 @@ import scala.io.StdIn
   */
 object jewelrybox {
   def main(args: Array[String]): Unit = {
-    val cases = StdIn.readInt
+    val cases = StdIn.readInt()
 
-    Stream.continually(StdIn.readLine)
+    LazyList.continually(StdIn.readLine())
       .take(cases)
       .foreach(s => {
         val Array(w, l) = s.split(' ').map(_.toInt)

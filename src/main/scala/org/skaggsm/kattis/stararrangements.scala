@@ -8,7 +8,7 @@ import scala.language.postfixOps
   */
 object stararrangements {
   def main(args: Array[String]): Unit = {
-    val numStars = StdIn.readInt
+    val numStars = StdIn.readInt()
 
     println(s"$numStars:")
 

@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object planina {
   def main(args: Array[String]): Unit = {
-    val n = StdIn.readInt
+    val n = StdIn.readInt()
 
     // ( -2^n + 2^(n+1) + 1 )^2
 

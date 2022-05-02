@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object apaxiaaans {
   def main(args: Array[String]): Unit = {
-    val name = StdIn.readLine
+    val name = StdIn.readLine()
 
     println(name.replaceAll("(.)\\1+","$1"))
   }

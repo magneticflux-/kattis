@@ -7,9 +7,9 @@ import scala.io.StdIn
   */
 object lineup {
   def main(args: Array[String]): Unit = {
-    val numStudents = StdIn.readInt
+    val numStudents = StdIn.readInt()
 
-    val students = Iterator.continually(StdIn.readLine).take(numStudents).toSeq
+    val students = Iterator.continually(StdIn.readLine()).take(numStudents).toSeq
 
     if (students == students.sorted)
       println("INCREASING")

@@ -7,16 +7,16 @@ import scala.io.StdIn
   */
 object rationalsequence2 {
   def main(args: Array[String]): Unit = {
-    val cases = StdIn.readInt
+    val cases = StdIn.readInt()
 
-    Iterator.continually(StdIn.readLine)
+    Iterator.continually(StdIn.readLine())
       .take(cases)
       .foreach(line => {
         val Array(num, p, q) = line.split("[ /]").map(_.toInt)
 
         val node = Node(p, q)
 
-        val directions = Stream.iterate(node)(_.parent)
+        val directions = LazyList.iterate(node)(_.parent)
           .takeWhile(_.hasParent)
           .map(_.direction)
 

@@ -7,9 +7,9 @@ import scala.io.StdIn
   */
 object quickestimate {
   def main(args: Array[String]): Unit = {
-    val numCosts = StdIn.readInt
+    val numCosts = StdIn.readInt()
 
-    Iterator.continually(StdIn.readLine)
+    Iterator.continually(StdIn.readLine())
       .take(numCosts)
       .map(_.length)
       .foreach(println)

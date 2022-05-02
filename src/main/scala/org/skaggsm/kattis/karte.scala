@@ -12,7 +12,7 @@ object karte {
     if (cards.size != cards.distinct.size)
       println("GRESKA")
     else {
-      val suits = cards.groupBy(_ (0)).mapValues(13 - _.size).withDefaultValue(13)
+      val suits = cards.groupBy(_ (0)).view.mapValues(13 - _.size).toMap.withDefaultValue(13)
 
       println(s"${suits('P')} ${suits('K')} ${suits('H')} ${suits('T')}")
     }

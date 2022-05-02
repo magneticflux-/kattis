@@ -10,7 +10,7 @@ object simonsays {
     val count = StdIn.readInt()
 
     for (_ <- 0 until count) {
-      val line = StdIn.readLine
+      val line = StdIn.readLine()
 
       if (line.startsWith("Simon says"))
         println(line.substring(10))

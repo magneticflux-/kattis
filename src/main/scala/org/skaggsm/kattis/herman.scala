@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object herman {
   def main(args: Array[String]): Unit = {
-    val r = StdIn.readDouble
+    val r = StdIn.readDouble()
 
     println(math.Pi * math.pow(r, 2))
     println(2 * math.pow(r, 2))

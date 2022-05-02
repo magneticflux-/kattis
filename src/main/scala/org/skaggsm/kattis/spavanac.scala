@@ -9,7 +9,7 @@ import scala.io.StdIn
   */
 object spavanac {
   def main(args: Array[String]): Unit = {
-    val Array(h, m) = StdIn.readLine.split(' ').map(_.toInt)
+    val Array(h, m) = StdIn.readLine().split(' ').map(_.toInt)
 
     val newTime = LocalTime.of(h, m).minusMinutes(45)
 

@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object timeloop {
   def main(args: Array[String]): Unit = {
-    val times = StdIn.readInt
+    val times = StdIn.readInt()
 
     for (i <- 1 to times)
       println(s"$i Abracadabra")

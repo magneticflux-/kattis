@@ -9,7 +9,7 @@ import scala.io.StdIn
   */
 object datum {
   def main(args: Array[String]): Unit = {
-    val Array(dayOfMonth, monthOfYear) = StdIn.readLine.split(' ').map(_.toInt)
+    val Array(dayOfMonth, monthOfYear) = StdIn.readLine().split(' ').map(_.toInt)
     println(
       LocalDate.of(2009, monthOfYear, dayOfMonth)
         .getDayOfWeek

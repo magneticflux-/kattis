@@ -7,11 +7,11 @@ import scala.io.StdIn
   */
 object icpcawards {
   def main(args: Array[String]): Unit = {
-    val numTeams = StdIn.readInt
+    val numTeams = StdIn.readInt()
 
     (0 until numTeams)
       .map(i => {
-        val Array(uni, name) = StdIn.readLine.split(' ')
+        val Array(uni, name) = StdIn.readLine().split(' ')
         (i, uni, name)
       })
       .groupBy(_._2) // Group by uni

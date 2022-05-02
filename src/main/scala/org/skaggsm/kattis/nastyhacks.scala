@@ -7,10 +7,10 @@ import scala.io.StdIn
   */
 object nastyhacks {
   def main(args: Array[String]): Unit = {
-    val cases = StdIn.readInt
+    val cases = StdIn.readInt()
 
     for (_ <- 0 until cases) {
-      val Array(r, e, c) = StdIn.readLine.split(' ').map(_.toInt)
+      val Array(r, e, c) = StdIn.readLine().split(' ').map(_.toInt)
 
       // Positive if no advertise is better, zero if doesn't matter, negative if advertise is better
       r - (e - c) match {

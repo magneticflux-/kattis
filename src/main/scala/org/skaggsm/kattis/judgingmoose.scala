@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object judgingmoose {
   def main(args: Array[String]): Unit = {
-    val Array(l, r) = StdIn.readLine.split(' ').map(_.toInt)
+    val Array(l, r) = StdIn.readLine().split(' ').map(_.toInt)
 
     if (l == 0 && r == 0)
       println("Not a moose")

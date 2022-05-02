@@ -10,7 +10,7 @@ object trainsorting {
   def main(args: Array[String]): Unit = {
     val count = StdIn.readInt()
 
-    val trains = new mutable.ArraySeq[Int](count)
+    val trains = mutable.ArraySeq[Int](count)
 
     for (i <- 0 until count)
       trains.update(i, StdIn.readInt())

@@ -7,9 +7,9 @@ import scala.io.StdIn
   */
 object bus {
   def main(args: Array[String]): Unit = {
-    val cases = StdIn.readInt
+    val cases = StdIn.readInt()
 
-    Iterator.continually(StdIn.readInt)
+    Iterator.continually(StdIn.readInt())
       .take(cases)
       .map(i => {
         (0 until i)

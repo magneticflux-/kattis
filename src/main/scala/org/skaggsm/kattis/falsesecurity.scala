@@ -45,10 +45,10 @@ object falsesecurity {
   val morseToAscii: Map[String, Char] = morse.map(_.swap).toMap
 
   def main(args: Array[String]): Unit = {
-    Stream.continually(StdIn.readLine)
+    LazyList.continually(StdIn.readLine())
       .takeWhile(s => s != null && s != "")
       .map(line => {
-        val morseVersion = line.seq.map(asciiToMorse)
+        val morseVersion = line.map(asciiToMorse)
         val lengths = morseVersion.map(_.length)
         val reversedLengths = lengths.reverse
 

@@ -7,8 +7,8 @@ import scala.io.StdIn
   */
 object sok {
   def main(args: Array[String]): Unit = {
-    val Array(a, b, c) = StdIn.readLine.split(' ').map(_.toInt)
-    val Array(i, j, k) = StdIn.readLine.split(' ').map(_.toInt)
+    val Array(a, b, c) = StdIn.readLine().split(' ').map(_.toInt)
+    val Array(i, j, k) = StdIn.readLine().split(' ').map(_.toInt)
 
     val possibleAUsage = a / i.toDouble
     val possibleBUsage = b / j.toDouble

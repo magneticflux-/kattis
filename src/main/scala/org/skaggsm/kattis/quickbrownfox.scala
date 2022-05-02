@@ -12,7 +12,7 @@ object quickbrownfox {
     val alphabet = "abcdefghijklmnopqrstuvwxyz".toSet
 
     for (_ <- 0 until count) {
-      val lineChars = StdIn.readLine.filter(_.isLetter).toLowerCase.toSet
+      val lineChars = StdIn.readLine().filter(_.isLetter).toLowerCase.toSet
 
       val diff = alphabet -- lineChars
 

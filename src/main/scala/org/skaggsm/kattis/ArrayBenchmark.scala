@@ -1,9 +1,10 @@
 package org.skaggsm.kattis
 
 import java.util.concurrent.TimeUnit
-
-import org.openjdk.jmh.annotations._
+import org.openjdk.jmh.annotations.*
 import org.openjdk.jmh.infra.Blackhole
+
+import scala.collection.parallel.CollectionConverters.{ArrayIsParallelizable, RangeIsParallelizable}
 
 /**
   * Created by Mitchell Skaggs on 5/2/2018.

@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object pauleigon {
   def main(args: Array[String]): Unit = {
-    val Array(n, p, q) = StdIn.readLine.split(' ').map(_.toInt)
+    val Array(n, p, q) = StdIn.readLine().split(' ').map(_.toInt)
 
     val currentRound = p + q
 

@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object filip {
   def main(args: Array[String]): Unit = {
-    val Array(first, second) = StdIn.readLine.split(' ')
+    val Array(first, second) = StdIn.readLine().split(' ')
       .map(_.reverse.toInt)
 
     println(math.max(first, second))

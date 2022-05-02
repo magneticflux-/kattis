@@ -7,10 +7,10 @@ import scala.io.StdIn
   */
 object helpaphd {
   def main(args: Array[String]): Unit = {
-    val numProblems = StdIn.readInt
+    val numProblems = StdIn.readInt()
 
     (0 until numProblems).foreach(_ => {
-      val line = StdIn.readLine
+      val line = StdIn.readLine()
 
       if (line == "P=NP")
         println("skipped")

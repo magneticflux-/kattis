@@ -7,11 +7,11 @@ import scala.io.StdIn
   */
 object textencryption {
   def main(args: Array[String]): Unit = {
-    var line = StdIn.readLine
+    var line = StdIn.readLine()
 
     while (line != "0") {
       val n = line.toInt
-      val plainText = StdIn.readLine
+      val plainText = StdIn.readLine()
       val uniformText = plainText.replace(" ", "").toUpperCase
       val length = uniformText.length
 
@@ -27,7 +27,7 @@ object textencryption {
         .mkString
       )
 
-      line = StdIn.readLine
+      line = StdIn.readLine()
     }
   }
 }

@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object patuljci {
   def main(args: Array[String]): Unit = {
-    val dwarves = Stream.continually(StdIn.readInt)
+    val dwarves = LazyList.continually(StdIn.readInt())
       .take(9)
 
     val solution = dwarves.combinations(7).find(_.sum == 100)

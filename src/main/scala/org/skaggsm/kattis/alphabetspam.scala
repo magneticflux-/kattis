@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object alphabetspam {
   def main(args: Array[String]): Unit = {
-    val line = StdIn.readLine
+    val line = StdIn.readLine()
     val length = line.length.toDouble
     val numWhitespace = line.count(_ == '_')
     val numLowercase = line.count(_.isLower)

@@ -7,9 +7,9 @@ import scala.io.StdIn
   */
 object cold {
   def main(args: Array[String]): Unit = {
-    val count = StdIn.readInt
+    StdIn.readInt()
 
-    val temps = StdIn.readLine.split(' ').map(_.toInt)
+    val temps = StdIn.readLine().split(' ').map(_.toInt)
 
     println(temps.count(_ < 0))
   }

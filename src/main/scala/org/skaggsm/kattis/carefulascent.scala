@@ -7,16 +7,15 @@ import scala.io.StdIn
   */
 object carefulascent {
   def main(args: Array[String]): Unit = {
-    val Array(fX, fY) = StdIn.readLine.split(' ').map(_.toDouble)
-    val numShields = StdIn.readInt
+    val Array(fX, fY) = StdIn.readLine().split(' ').map(_.toDouble)
+    val numShields = StdIn.readInt()
     val shields = (0 until numShields)
-      .map(_ => StdIn.readLine)
+      .map(_ => StdIn.readLine())
       .map(s => {
         val Array(low, high, factor) = s.split(' ')
         Shield(low.toInt, high.toInt, factor.toDouble)
       })
 
-    val timeToReach = fY
     val unShieldedAirFactor = fY - shields.map(_.distance).sum
     val shieldedAirFactor = shields.map(s => s.distance * s.factor).sum
 

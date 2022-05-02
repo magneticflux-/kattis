@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object onechicken {
   def main(args: Array[String]): Unit = {
-    val Array(n, m) = StdIn.readLine.split(' ').map(_.toInt)
+    val Array(n, m) = StdIn.readLine().split(' ').map(_.toInt)
 
     val netChicken = m - n
 

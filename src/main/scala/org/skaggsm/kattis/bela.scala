@@ -9,7 +9,7 @@ object bela {
   /**
     * (number, isDominant) -> score
     */
-  val scores = Map(
+  private val scores = Map(
     ('A', true) -> 11,
     ('A', false) -> 11,
     ('K', true) -> 4,
@@ -29,11 +29,11 @@ object bela {
   )
 
   def main(args: Array[String]): Unit = {
-    val line = StdIn.readLine.split(' ')
+    val line = StdIn.readLine().split(' ')
     val (hands, suit) = (line(0).toInt, line(1).head)
 
     val sum = (0 until hands * 4)
-      .map(_ => StdIn.readLine)
+      .map(_ => StdIn.readLine())
       .map(s => (s(0), s(1)))
       .map(p => scores(p._1, p._2 == suit))
       .sum

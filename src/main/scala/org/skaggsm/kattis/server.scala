@@ -7,9 +7,9 @@ import scala.io.StdIn
   */
 object server {
   def main(args: Array[String]): Unit = {
-    val Array(count, t) = StdIn.readLine.split(' ').map(_.toInt)
+    val Array(count, t) = StdIn.readLine().split(' ').map(_.toInt)
 
-    val tasks = StdIn.readLine.split(' ').toSeq.map(_.toInt)
+    val tasks = StdIn.readLine().split(' ').toSeq.map(_.toInt)
 
     println(tasks.inits.find(_.sum <= t).toSeq.flatten.size)
   }

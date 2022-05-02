@@ -7,11 +7,11 @@ import scala.io.StdIn
   */
 object pot {
   def main(args: Array[String]): Unit = {
-    val count = StdIn.readInt
+    val count = StdIn.readInt()
 
     println(
       (0 until count)
-        .map(_ => StdIn.readLine)
+        .map(_ => StdIn.readLine())
         .map(s => BigInt(s.init).pow(s.last.asDigit))
         .sum
     )

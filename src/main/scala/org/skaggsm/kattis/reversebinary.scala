@@ -7,6 +7,6 @@ import scala.io.StdIn
   */
 object reversebinary {
   def main(args: Array[String]): Unit = {
-    println(Integer.parseInt(StdIn.readInt.toBinaryString.reverse, 2))
+    println(Integer.parseInt(StdIn.readInt().toBinaryString.reverse, 2))
   }
 }

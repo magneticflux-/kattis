@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object leftbeehind {
   def main(args: Array[String]): Unit = {
-    Stream.continually(StdIn.readLine)
+    LazyList.continually(StdIn.readLine())
       .takeWhile(_ != "0 0")
       .map(l => {
         val Array(sweet, sour) = l.split(' ').map(_.toInt)

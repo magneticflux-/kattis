@@ -7,12 +7,12 @@ import scala.io.StdIn
   */
 object oddmanout {
   def main(args: Array[String]): Unit = {
-    val numCases = StdIn.readInt
+    val numCases = StdIn.readInt()
 
     (1 to numCases).foreach(caseNum => {
-      val numGuests = StdIn.readInt
-      val numbers = StdIn.readLine.split(' ').map(_.toInt)
-      val occurances = numbers.groupBy(i => i).mapValues(_.length)
+      StdIn.readInt()
+      val numbers = StdIn.readLine().split(' ').map(_.toInt)
+      val occurances = numbers.groupBy(i => i).view.mapValues(_.length)
       occurances.find(_._2 == 1).map(_._1).foreach(i => println(s"Case #$caseNum: $i"))
     })
   }

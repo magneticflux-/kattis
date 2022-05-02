@@ -7,11 +7,11 @@ import scala.io.StdIn
   */
 object detaileddifferences {
   def main(args: Array[String]): Unit = {
-    val numCases = StdIn.readInt
+    val numCases = StdIn.readInt()
 
     0 until numCases foreach (_ => {
-      val s1 = StdIn.readLine
-      val s2 = StdIn.readLine
+      val s1 = StdIn.readLine()
+      val s2 = StdIn.readLine()
 
       println(s1)
       println(s2)
@@ -20,7 +20,7 @@ object detaileddifferences {
           case (c1, c2) if c1 == c2 => '.'
           case _ => '*'
         }.mkString)
-      println
+      println()
     })
   }
 }

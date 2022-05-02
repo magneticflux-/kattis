@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object acm {
   def main(args: Array[String]): Unit = {
-    val log = Iterator.continually(StdIn.readLine)
+    val log = Iterator.continually(StdIn.readLine())
       .takeWhile(_ != "-1")
       .map(line => {
         val Array(time, problem, correct) = line.split(' ')

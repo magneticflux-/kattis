@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object chopin {
 
-  val equivalants = Seq(
+  private val equivalents = Seq(
     "A#" -> "Bb",
     "C#" -> "Db",
     "D#" -> "Eb",
@@ -15,10 +15,10 @@ object chopin {
     "G#" -> "Ab",
   )
 
-  val alternates: Map[String, String] = (equivalants ++ equivalants.map(_.swap)).toMap
+  val alternates: Map[String, String] = (equivalents ++ equivalents.map(_.swap)).toMap
 
   def main(args: Array[String]): Unit = {
-    Stream.continually(StdIn.readLine)
+    LazyList.continually(StdIn.readLine())
       .takeWhile(s => s != null && s.nonEmpty)
       .zipWithIndex
       .map(p => {

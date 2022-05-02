@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object linearrecurrence {
   def main(args: Array[String]): Unit = {
-    val degree = StdIn.readInt()
+    StdIn.readInt()
 
   }
 }

@@ -10,7 +10,7 @@ object zanzibar {
     val count = StdIn.readInt()
 
     for (_ <- 0 until count) {
-      val line = StdIn.readLine.split(' ').map(_.toInt).takeWhile(_ != 0)
+      val line = StdIn.readLine().split(' ').map(_.toInt).takeWhile(_ != 0)
 
       val discrepancies = line.sliding(2)
         .flatMap {

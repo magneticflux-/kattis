@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object conundrum {
   def main(args: Array[String]): Unit = {
-    val original = StdIn.readLine
-    println(original.zip(Stream.continually("PER").flatten.take(original.length)).count(p => p._1 != p._2))
+    val original = StdIn.readLine()
+    println(original.zip(LazyList.continually("PER").flatten.take(original.length)).count(p => p._1 != p._2))
   }
 }

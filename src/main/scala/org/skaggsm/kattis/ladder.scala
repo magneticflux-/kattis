@@ -7,8 +7,8 @@ import scala.io.StdIn
   */
 object ladder {
   def main(args: Array[String]): Unit = {
-    val Array(h, v) = StdIn.readLine.split(' ').map(_.toInt)
+    val Array(h, v) = StdIn.readLine().split(' ').map(_.toInt)
 
-    println((h / math.sin(v.toRadians)).ceil.round)
+    println((h / math.sin(v.toDouble.toRadians)).ceil.round)
   }
 }

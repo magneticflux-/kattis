@@ -11,7 +11,7 @@ object savingdaylight {
   val dateTimePattern: Regex = """(\w+ \d+ \d+) (\d+):(\d+) (\d+):(\d+)""".r
 
   def main(args: Array[String]): Unit = {
-    Stream.continually(StdIn.readLine)
+    LazyList.continually[String](StdIn.readLine())
       .takeWhile(s => s != null && s.nonEmpty)
       .map {
         case dateTimePattern(date, startH, startM, endH, endM) =>

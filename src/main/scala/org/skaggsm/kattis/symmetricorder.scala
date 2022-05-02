@@ -7,13 +7,13 @@ import scala.io.StdIn
   */
 object symmetricorder {
   def main(args: Array[String]): Unit = {
-    Iterator.continually(StdIn.readInt)
+    Iterator.continually(StdIn.readInt())
       .takeWhile(_ != 0)
       .zipWithIndex
       .foreach(pair => {
         val (setNum, index) = pair
         println(s"SET ${index + 1}")
-        val names = Iterator.continually(StdIn.readLine)
+        val names = Iterator.continually(StdIn.readLine())
           .take(setNum)
           .toSeq
 

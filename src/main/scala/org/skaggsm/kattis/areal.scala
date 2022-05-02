@@ -9,7 +9,7 @@ import scala.math.sqrt
 object areal {
   def main(args: Array[String]): Unit = {
     val area = StdIn.readLong()
-    val sideLength = sqrt(area)
+    val sideLength = sqrt(area.toDouble)
     val perimeter = sideLength * 4
 
     println(perimeter)

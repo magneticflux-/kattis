@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object rijeci {
   def main(args: Array[String]): Unit = {
-    val k = StdIn.readInt
+    val k = StdIn.readInt()
 
     val finalState = Iterator.iterate(State(1, 0))(_.advance())
       .take(k + 1)

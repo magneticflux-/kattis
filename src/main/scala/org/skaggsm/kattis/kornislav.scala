@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object kornislav {
   def main(args: Array[String]): Unit = {
-    val lengths = StdIn.readLine.split(' ').map(_.toInt)
+    val lengths = StdIn.readLine().split(' ').map(_.toInt)
     val divisions = lengths.combinations(2).map(subset => (subset, lengths diff subset))
 
     println(divisions

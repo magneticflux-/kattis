@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object railroad2 {
   def main(args: Array[String]): Unit = {
-    val Array(_, y) = StdIn.readLine.split(' ').map(_.toInt)
+    val Array(_, y) = StdIn.readLine().split(' ').map(_.toInt)
 
     println(if (y % 2 == 0) "possible" else "impossible")
   }

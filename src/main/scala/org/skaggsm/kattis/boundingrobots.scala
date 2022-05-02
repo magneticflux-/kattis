@@ -7,14 +7,14 @@ import scala.io.StdIn
   */
 object boundingrobots {
   def main(args: Array[String]): Unit = {
-    Iterator.continually(StdIn.readLine)
+    Iterator.continually(StdIn.readLine())
       .takeWhile(_ != "0 0")
       .foreach(line => {
         val Array(w, l) = line.split(' ').map(_.toInt)
 
-        val numCommands = StdIn.readInt
+        val numCommands = StdIn.readInt()
 
-        val commands = Iterator.continually(StdIn.readLine)
+        val commands = Iterator.continually(StdIn.readLine())
           .take(numCommands)
           .map(_.split(' '))
           .map {

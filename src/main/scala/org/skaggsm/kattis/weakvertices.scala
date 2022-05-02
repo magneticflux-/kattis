@@ -8,7 +8,7 @@ import scala.language.postfixOps
   */
 object weakvertices {
   def main(args: Array[String]): Unit = {
-    var line = StdIn.readLine
+    var line = StdIn.readLine()
 
     while (line != "-1") {
 
@@ -16,7 +16,7 @@ object weakvertices {
       val vertices = 0 until size toSet
 
       val edges = (0 until size).flatMap(row => {
-        StdIn.readLine.split(' ').map(_.toInt).zipWithIndex.flatMap {
+        StdIn.readLine().split(' ').map(_.toInt).zipWithIndex.flatMap {
           case (0, _) => None
           case (1, col) => Some(Set(row, col))
           case _ => throw new MatchError(())
@@ -32,7 +32,7 @@ object weakvertices {
 
       println(weakVertices.toSeq.sorted.mkString(" "))
 
-      line = StdIn.readLine
+      line = StdIn.readLine()
     }
   }
 }

@@ -12,7 +12,7 @@ object howmanydigits {
 
   def main(args: Array[String]): Unit = {
 
-    var line = StdIn.readLine
+    var line = StdIn.readLine()
     while (line != "" && line != null) {
 
       val i = line.toInt
@@ -27,7 +27,7 @@ object howmanydigits {
       }
       println(result.floor.round + 1)
 
-      line = StdIn.readLine
+      line = StdIn.readLine()
     }
   }
 }

@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object skocimis {
   def main(args: Array[String]): Unit = {
-    val Array(a, b, c) = StdIn.readLine.split(' ').map(_.toInt)
+    val Array(a, b, c) = StdIn.readLine().split(' ').map(_.toInt)
 
     val largestGap = math.max(b - a, c - b)
 

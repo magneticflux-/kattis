@@ -7,6 +7,6 @@ import scala.io.StdIn
   */
 object kemija08 {
   def main(args: Array[String]): Unit = {
-    println(StdIn.readLine.replaceAll("([aeiou])p\\1", "$1"))
+    println(StdIn.readLine().replaceAll("([aeiou])p\\1", "$1"))
   }
 }

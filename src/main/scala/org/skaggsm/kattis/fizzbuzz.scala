@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object fizzbuzz {
   def main(args: Array[String]): Unit = {
-    val Array(x, y, n) = StdIn.readLine.split(' ').map(_.toInt)
+    val Array(x, y, n) = StdIn.readLine().split(' ').map(_.toInt)
 
     for (i <- 1 to n) {
       println(

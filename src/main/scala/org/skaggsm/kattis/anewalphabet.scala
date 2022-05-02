@@ -37,7 +37,7 @@ object anewalphabet {
   ).withDefault(c => c.toString)
 
   def main(args: Array[String]): Unit = {
-    val line = StdIn.readLine
+    val line = StdIn.readLine()
 
     println(line.toLowerCase.flatMap(translation(_)))
   }

@@ -7,8 +7,8 @@ import scala.io.StdIn
   */
 object aaah {
   def main(args: Array[String]): Unit = {
-    val possiblePower = StdIn.readLine.count(_ == 'a')
-    val requiredPower = StdIn.readLine.count(_ == 'a')
+    val possiblePower = StdIn.readLine().count(_ == 'a')
+    val requiredPower = StdIn.readLine().count(_ == 'a')
 
     if (possiblePower >= requiredPower)
       println("go")

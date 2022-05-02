@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object nodup {
   def main(args: Array[String]): Unit = {
-    val line = StdIn.readLine
+    val line = StdIn.readLine()
 
     if (line.split(' ') sameElements line.split(' ').distinct)
       println("yes")

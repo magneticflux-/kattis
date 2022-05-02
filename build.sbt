@@ -2,10 +2,10 @@ name := "kattis"
 
 version := "0.1"
 
-scalaVersion := "2.12.6"
+scalaVersion := "2.13.8"
 
 enablePlugins(JmhPlugin)
 
-scalacOptions ++= Seq("-unchecked", "-deprecation")
+scalacOptions ++= Seq("-Xlint:unused", "-unchecked", "-deprecation", "-Xsource:3")
 
-libraryDependencies += "com.github.johnreedlol" %% "scala-trace-debug" % "5.0.0"
+libraryDependencies += "org.scala-lang.modules" %% "scala-parallel-collections" % "1.0.4"

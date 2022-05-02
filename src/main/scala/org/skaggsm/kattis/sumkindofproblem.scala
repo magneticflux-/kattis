@@ -7,9 +7,9 @@ import scala.io.StdIn
   */
 object sumkindofproblem {
   def main(args: Array[String]): Unit = {
-    val numSets = StdIn.readInt
+    val numSets = StdIn.readInt()
 
-    Iterator.continually(StdIn.readLine)
+    Iterator.continually(StdIn.readLine())
       .take(numSets)
       .map(_.split(' ').map(_.toInt))
       .map { case Array(a, b) => (a, b) }

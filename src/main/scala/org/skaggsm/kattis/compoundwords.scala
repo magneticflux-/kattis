@@ -7,11 +7,11 @@ import scala.io.StdIn
   */
 object compoundwords {
   def main(args: Array[String]): Unit = {
-    val words = Stream.continually(StdIn.readLine)
+    val words = LazyList.continually(StdIn.readLine())
       .takeWhile(s => s != null && s.nonEmpty)
       .flatMap(_.split(' '))
 
-    val compoundWords = words.combinations(2).flatMap { case Stream(a, b) => Seq(s"$a$b", s"$b$a") }.toSeq
+    val compoundWords = words.combinations(2).flatMap { case LazyList(a, b) => Seq(s"$a$b", s"$b$a") }.toSeq
 
     compoundWords.distinct.sorted.foreach(println)
   }

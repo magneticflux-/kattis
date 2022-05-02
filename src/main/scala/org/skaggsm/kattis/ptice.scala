@@ -7,14 +7,14 @@ import scala.io.StdIn
   */
 object ptice {
   def main(args: Array[String]): Unit = {
-    val numQuestions = StdIn.readInt
-    val answers = StdIn.readLine
+    val numQuestions = StdIn.readInt()
+    val answers = StdIn.readLine()
 
 
     val attempts = Seq(
-      "Adrian" -> Stream.continually("ABC").flatten.take(numQuestions),
-      "Bruno" -> Stream.continually("BABC").flatten.take(numQuestions),
-      "Goran" -> Stream.continually("CCAABB").flatten.take(numQuestions)
+      "Adrian" -> LazyList.continually("ABC").flatten.take(numQuestions),
+      "Bruno" -> LazyList.continually("BABC").flatten.take(numQuestions),
+      "Goran" -> LazyList.continually("CCAABB").flatten.take(numQuestions)
     )
 
     val results = attempts.map(attempt => attempt.copy(_2 = attempt._2.zip(answers).count(pair => pair._1 == pair._2)))

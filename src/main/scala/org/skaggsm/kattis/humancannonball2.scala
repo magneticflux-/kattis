@@ -9,9 +9,9 @@ object humancannonball2 {
   val G = 9.81
 
   def main(args: Array[String]): Unit = {
-    val numCases = StdIn.readInt
+    val numCases = StdIn.readInt()
     (0 until numCases).foreach(_ => {
-      val Array(v, theta, x, h1, h2) = StdIn.readLine.split(' ').map(_.toDouble)
+      val Array(v, theta, x, h1, h2) = StdIn.readLine().split(' ').map(_.toDouble)
 
       val vX = v * math.cos(theta.toRadians)
       val vY = v * math.sin(theta.toRadians)

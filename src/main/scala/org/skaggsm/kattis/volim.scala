@@ -11,10 +11,10 @@ object volim {
   final val NUM_PLAYERS: Int = 8
 
   def main(args: Array[String]): Unit = {
-    val initialPlayer = StdIn.readInt - 1
-    val numQuestions = StdIn.readInt
+    val initialPlayer = StdIn.readInt() - 1
+    val numQuestions = StdIn.readInt()
 
-    val events = Iterator.continually(StdIn.readLine)
+    val events = Iterator.continually(StdIn.readLine())
       .take(numQuestions)
       .map(_.split(' '))
       .map {

@@ -6,7 +6,7 @@ import scala.io.StdIn
   * Created by Mitchell Skaggs on 5/4/2018.
   */
 object numberfun {
-  val operators = Seq(
+  private val operators = Seq(
     (x: Double, y: Double) => x + y,
     (x: Double, y: Double) => x - y,
     (x: Double, y: Double) => x * y,
@@ -14,10 +14,10 @@ object numberfun {
   )
 
   def main(args: Array[String]): Unit = {
-    val numCases = StdIn.readInt
+    val numCases = StdIn.readInt()
 
     (0 until numCases).foreach(_ => {
-      val Array(a, b, c) = StdIn.readLine.split(' ').map(_.toDouble)
+      val Array(a, b, c) = StdIn.readLine().split(' ').map(_.toDouble)
       val possibilities = for (
         pair <- Seq((a, b), (b, a));
         op <- operators

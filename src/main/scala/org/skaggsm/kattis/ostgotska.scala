@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object ostgotska {
   def main(args: Array[String]): Unit = {
-    val sentence = StdIn.readLine.split(' ').toSeq
+    val sentence = StdIn.readLine().split(' ').toSeq
 
     val words = sentence.size
 

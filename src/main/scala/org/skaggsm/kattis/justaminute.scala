@@ -7,9 +7,9 @@ import scala.io.StdIn
   */
 object justaminute {
   def main(args: Array[String]): Unit = {
-    val numSamples = StdIn.readInt
+    val numSamples = StdIn.readInt()
 
-    val Seq(m, s) = Iterator.continually(StdIn.readLine)
+    val Seq(m, s) = Iterator.continually(StdIn.readLine())
       .take(numSamples)
       .map(_.split(' ').map(_.toInt))
       .toSeq

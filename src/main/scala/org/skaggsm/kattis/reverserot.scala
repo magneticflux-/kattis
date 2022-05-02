@@ -9,7 +9,7 @@ object reverserot {
   val encoding: String = "ABCDEFGHIJKLMNOPQRSTUVWXYZ_."
 
   def main(args: Array[String]): Unit = {
-    Iterator.continually(StdIn.readLine)
+    Iterator.continually(StdIn.readLine())
       .takeWhile(_ != "0")
       .foreach(line => {
         val Array(rotNumberString, stringToRot) = line.split(' ')

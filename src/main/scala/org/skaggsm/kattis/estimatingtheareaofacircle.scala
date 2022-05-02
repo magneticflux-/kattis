@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object estimatingtheareaofacircle {
   def main(args: Array[String]): Unit = {
-    var line = StdIn.readLine
+    var line = StdIn.readLine()
 
     while (line != null && line != "0 0 0") {
 
@@ -15,7 +15,7 @@ object estimatingtheareaofacircle {
 
       println(s"${math.Pi * math.pow(r, 2)} ${4 * math.pow(r, 2) * c / m}")
 
-      line = StdIn.readLine
+      line = StdIn.readLine()
     }
   }
 }

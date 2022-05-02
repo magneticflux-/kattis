@@ -7,14 +7,14 @@ import scala.io.StdIn
   */
 object closingtheloop {
   def main(args: Array[String]): Unit = {
-    val cases = StdIn.readInt
+    val cases = StdIn.readInt()
 
-    Iterator.continually(StdIn.readInt)
+    Iterator.continually(StdIn.readInt())
       .take(cases)
       .zipWithIndex
       .map(_._2)
       .foreach(caseNum => {
-        val ropes = StdIn.readLine
+        val ropes = StdIn.readLine()
           .split(' ')
           .map(s => {
             val color = s.last match {

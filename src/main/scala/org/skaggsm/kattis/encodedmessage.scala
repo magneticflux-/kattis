@@ -9,7 +9,7 @@ object encodedmessage {
   def main(args: Array[String]): Unit = {
     val testCases = StdIn.readInt()
 
-    Iterator.continually(StdIn.readLine)
+    Iterator.continually(StdIn.readLine())
       .take(testCases)
       .foreach(line => {
         val sideLength = math.sqrt(line.length).round.toInt

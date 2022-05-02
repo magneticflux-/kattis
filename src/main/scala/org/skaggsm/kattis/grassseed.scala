@@ -7,12 +7,12 @@ import scala.io.StdIn
   */
 object grassseed {
   def main(args: Array[String]): Unit = {
-    val cost = StdIn.readDouble
-    val numLawns = StdIn.readInt
+    val cost = StdIn.readDouble()
+    val numLawns = StdIn.readInt()
     var total = 0d
 
     for (_ <- 0 until numLawns) {
-      val Array(l, w) = StdIn.readLine.split(' ').map(_.toDouble)
+      val Array(l, w) = StdIn.readLine().split(' ').map(_.toDouble)
       total += l * w * cost
     }
 

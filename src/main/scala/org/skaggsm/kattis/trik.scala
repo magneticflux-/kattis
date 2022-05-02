@@ -7,7 +7,7 @@ import scala.io.StdIn
   */
 object trik {
   def main(args: Array[String]): Unit = {
-    val line = StdIn.readLine
+    val line = StdIn.readLine()
 
     val cups = Array.range(1, 4)
 
