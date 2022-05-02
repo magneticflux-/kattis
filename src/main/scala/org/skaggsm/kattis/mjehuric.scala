@@ -6,12 +6,13 @@ import scala.io.StdIn
   * Created by Mitchell Skaggs on 7/2/2018.
   */
 object mjehuric {
+  //noinspection DuplicatedCode
   def main(args: Array[String]): Unit = {
     var list = StdIn.readLine().split(' ').map(_.toInt) match {
       case Array(a, b, c, d, e) => (a, b, c, d, e)
     }
 
-    do {
+    while (list != (1, 2, 3, 4, 5)) {
       list = list match {
         case (a, b, c, d, e) if a > b =>
           val result = (b, a, c, d, e)
@@ -44,6 +45,5 @@ object mjehuric {
         case _ => list
       }
     }
-    while (list != (1, 2, 3, 4, 5))
   }
 }

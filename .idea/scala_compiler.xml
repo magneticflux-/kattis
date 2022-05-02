@@ -6,8 +6,8 @@
       <option name="deprecationWarnings" value="true" />
       <option name="uncheckedWarnings" value="true" />
       <parameters>
-        <parameter value="-Xlint:unused" />
-        <parameter value="-Xsource:3" />
+        <parameter value="-source:3.0-migration" />
+        <parameter value="-Wunused:all" />
       </parameters>
     </profile>
     <profile name="sbt 3" modules="project">
